@@ -15,36 +15,36 @@
 	</head>
 	<body>
 
-		<div class="site smooth-scroll">
-
-			<header class="site-header">
-				<div class="site-header-wrap container">
-					<div class="logo-wrap">
-						<a href="index.html">
-							<img src="assets/img/future-web-logo.png" alt="">
-						</a>
-					</div>
-					<nav class="menu">
-						<ul>
-							<li>
-								<a href="index.html">Główna</a>
-							</li>
-							<li>
-								<a href="oferta.html">Oferta</a>
-							</li>
-							<li>
-								<a href="realizacje.html">Realizacje</a>
-							</li>
-							<li>
-								<a href="#">FAQ</a>
-							</li>
-							<li>
-								<a href="kontakt.html">Kontakt</a>
-							</li>
-						</ul>
-					</nav>
+		<header class="site-header">
+			<div class="site-header-wrap container">
+				<div class="logo-wrap">
+					<a href="index.html">
+						<img src="assets/img/future-web-logo.png" alt="">
+					</a>
 				</div>
-			</header>
+				<nav class="menu">
+					<ul>
+						<li>
+							<a href="index.html">Główna</a>
+						</li>
+						<li>
+							<a href="oferta.html">Oferta</a>
+						</li>
+						<li>
+							<a href="realizacje.html">Realizacje</a>
+						</li>
+						<li>
+							<a href="#">FAQ</a>
+						</li>
+						<li>
+							<a href="kontakt.html">Kontakt</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="site smooth-scroll">
 
 			<section class="hero flag-wrap">
 				<div class="flag"></div>
@@ -162,7 +162,6 @@
 
 		<script src="assets/js/main.js"></script>
 
-
 <script>
 	const section = document.querySelector(".flag")
 
@@ -184,7 +183,7 @@ var geometry = new THREE.PlaneGeometry(3, 4, 20, 30)
 var material = new THREE.MeshBasicMaterial({ 
   opacity: 0,
   transparent: true,
-  map: loader.load("assets/img/nano.jpg", () => { 
+  map: loader.load("assets/img/eco.jpg", () => { 
     material.opacity = 1 
   }),
 //   wireframe: true,

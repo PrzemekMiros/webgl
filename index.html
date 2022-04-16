@@ -28,10 +28,10 @@
 							<a href="index.html">Główna</a>
 						</li>
 						<li>
-							<a href="#">Oferta</a>
+							<a href="oferta.html">Oferta</a>
 						</li>
 						<li>
-							<a href="#">Realizacje</a>
+							<a href="realizacje.html">Realizacje</a>
 						</li>
 						<li>
 							<a href="#">FAQ</a>
@@ -99,17 +99,8 @@
 			</section>
 
 		</div>
-		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollToPlugin.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/MotionPathPlugin.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
-		<script src="assets/js/main.js"></script>
-
-        <script>
+		<script>
             const ease = {
               exponentialIn: (t) => {
                 return t == 0.0 ? t : Math.pow(2.0, 10.0 * (t - 1.0));
@@ -161,6 +152,17 @@
             	};
             }          
         </script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollToPlugin.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/MotionPathPlugin.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
+		<script src="assets/js/main.js"></script>
+
+
 
 <script>
 	const section = document.querySelector(".flag")
@@ -179,7 +181,7 @@ section.appendChild( renderer.domElement )
 
 const loader = new THREE.TextureLoader()
 
-var geometry = new THREE.PlaneGeometry(3, 4, 60, 80)
+var geometry = new THREE.PlaneGeometry(3, 4, 20, 30)
 var material = new THREE.MeshBasicMaterial({ 
   opacity: 0,
   transparent: true,
@@ -205,7 +207,7 @@ function animate() {
   flag.geometry.vertices.map(v => {    
     const waveY1 = 0.2 * Math.sin(v.y * 0.3 + time * 0.5)
     const waveY2 = 0.2 * Math.sin(v.y * 0.3 + time * 2)
-    const waveX1 = 0.1 * Math.sin(v.x * 2 + time * 3)
+    const waveX1 = 0.1 * Math.sin(v.x * 2 + time * 5)
     
     v.z = waveY1 + waveY2 + waveX1
   })
