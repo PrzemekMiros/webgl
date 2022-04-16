@@ -1,13 +1,11 @@
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector(".smooth-scroll"),
   smooth: true,
   tablet: { smooth: true },
-  smartphone: { smooth: false }
+  smartphone: { smooth: true }
 });
 
 
@@ -39,7 +37,14 @@ var tl = gsap.timeline({
     }
   });
 
-tl.from(".hero .flag", {scale: 0.4, y: "-60vh", rotationY: 55, rotation: 50, ease: "power2"})
+tl.from(".hero .flag", {
+    scale: 0.4, 
+    x: -100, 
+    y: "-80vh", 
+    rotationY: 55, 
+    rotation: 50, 
+    ease: "power2"
+})
 
 
 
@@ -51,14 +56,20 @@ ScrollTrigger.refresh();
 
 // Text loop
 
-gsap.to('.text-loop', { xPercent: -50, ease: 'none', duration: 31, repeat: -1 })
+gsap.to('.text-loop', { 
+  xPercent: -50, 
+  ease: 'none', 
+  duration: 75, 
+  repeat: -1 
+})
 
 gsap.from(".hero",{
   autoAlpha: 1,
   x: "100%",
   y: "-100%",
-  duration: 3
+  duration: 3,
+  ease: "power3"
 })
 
-
+// Infinite carousel
 
