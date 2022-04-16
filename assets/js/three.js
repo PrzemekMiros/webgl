@@ -38,11 +38,10 @@ function animate() {
   const time = clock.getElapsedTime()
   
   flag.geometry.vertices.map(v => {    
-    const waveY1 = 0.2 * Math.sin(v.y * 0.3 + time * 0.5)
-    const waveY2 = 0.2 * Math.sin(v.y * 0.3 + time * 2)
-    const waveX1 = 0.1 * Math.sin(v.x * 2 + time * 3)
+    const waveY1 = 0.2 * Math.sin(v.y * 2 + time * 2)
+    const waveX1 = 0.2 * Math.sin(v.x * 2 + time * 2)
     
-    v.z = waveY1 + waveY2 + waveX1
+    v.z = waveY1 + waveX1
   })
   
   flag.geometry.verticesNeedUpdate = true 

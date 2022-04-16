@@ -32,7 +32,7 @@ var tl = gsap.timeline({
       scroller: ".smooth-scroll",
       scrub: true,
       pin: true,
-      start: "+=10% top",
+      start: "top top",
       end: "+=300%"
     }
   });
@@ -41,8 +41,8 @@ tl.from(".hero .flag", {
     scale: 0.4, 
     x: -100, 
     y: "-80vh", 
-    rotationY: 55, 
-    rotation: 50, 
+    rotationY: 45, 
+    rotationX: -50, 
     ease: "power2"
 })
 
@@ -73,3 +73,13 @@ gsap.from(".hero",{
 
 // Infinite carousel
 
+/*
+.cube {
+  transform: scaleX(1.5) scaleY(2) scaleZ(1) rotateX(49deg) rotateY(-12deg) rotateZ(35deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+}
+.cube-wrap {
+  perspective: 1004px;
+  perspective-origin: 220% 50%;
+}
+
+*/
