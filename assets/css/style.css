@@ -236,21 +236,25 @@ h6,
 
 .xl {
     font-size: 58px;
+    font-weight: 600;
 }
 
 h1,
 .h1 {
     font-size: 48px;
+    font-weight: 600;
 }
 
 h2,
 .h2 {
-    font-size: 32px;
+    font-size: 36px;
+    font-weight: 500;
 }
 
 h3,
 .h3 {
     font-size: 28px;
+    font-weight: 500;
 }
 
 p {
@@ -270,7 +274,7 @@ h1,
 
 h2,
 .h2 {
-    font-size: 52px;
+    font-size: 68px;
 }
 
 h3,
@@ -319,6 +323,10 @@ h3,
 
 .p-relative {
     position: relative;
+}
+
+.container {
+    max-width: 1040px;
 }
 
 @media(max-width:767px) {
@@ -402,3 +410,65 @@ h3,
 
 /* Carousel 
 ---------------------------------------- */
+
+    @keyframes scroll {
+    0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    100% {
+    -webkit-transform: translateX(calc(-540px * 7));
+    transform: translateX(calc(-540px * 7));
+    }
+    }
+    .section-slider {
+        position: relative;
+    }
+    .perspective-slider {
+        perspective: 1200px;
+    }
+    .slider {
+    overflow: hidden;
+    position: relative;
+    transform: rotateY(25deg);
+    }
+    .slider::before, .slider::after {
+    background: linear-gradient(to right, #000 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 225px;
+    position: absolute;
+    width: 420px;
+    z-index: 2;
+    }
+    .slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    }
+    .slider::before {
+    left: 0;
+    top: 0;
+    }
+    .slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(420px * 14);
+    }
+    .slider .slide {
+    height: 225px;
+    width: 420px;
+    }
+
+    .service-absolute {
+        position: absolute;
+        top: -80px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+    }
+
+    .service-absolute p {
+        margin-bottom: 20px;
+    }
