@@ -37,12 +37,9 @@ var tl = gsap.timeline({
     }
   });
 
-tl.from(".hero .flag", {
-    scale: 0.4, 
-    x: -100, 
-    y: "-80vh", 
-    rotationY: 45, 
-    rotationX: -50, 
+tl.to(".hero .flag", {
+    scale: 8.4,  
+    y: '325%',
     ease: "power2"
 })
 
@@ -61,14 +58,6 @@ gsap.to('.text-loop', {
   ease: 'none', 
   duration: 75, 
   repeat: -1 
-})
-
-gsap.from(".hero",{
-  autoAlpha: 1,
-  x: "100%",
-  y: "-100%",
-  duration: 3,
-  ease: "power3"
 })
 
 // Infinite carousel
